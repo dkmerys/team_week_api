@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: reidashwill
+-- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: danielmerys
 --
 
 CREATE TABLE public.ar_internal_metadata (
@@ -32,10 +32,10 @@ CREATE TABLE public.ar_internal_metadata (
 );
 
 
-ALTER TABLE public.ar_internal_metadata OWNER TO reidashwill;
+ALTER TABLE public.ar_internal_metadata OWNER TO danielmerys;
 
 --
--- Name: businesses; Type: TABLE; Schema: public; Owner: reidashwill
+-- Name: businesses; Type: TABLE; Schema: public; Owner: danielmerys
 --
 
 CREATE TABLE public.businesses (
@@ -47,10 +47,10 @@ CREATE TABLE public.businesses (
 );
 
 
-ALTER TABLE public.businesses OWNER TO reidashwill;
+ALTER TABLE public.businesses OWNER TO danielmerys;
 
 --
--- Name: businesses_id_seq; Type: SEQUENCE; Schema: public; Owner: reidashwill
+-- Name: businesses_id_seq; Type: SEQUENCE; Schema: public; Owner: danielmerys
 --
 
 CREATE SEQUENCE public.businesses_id_seq
@@ -61,17 +61,17 @@ CREATE SEQUENCE public.businesses_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.businesses_id_seq OWNER TO reidashwill;
+ALTER TABLE public.businesses_id_seq OWNER TO danielmerys;
 
 --
--- Name: businesses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: reidashwill
+-- Name: businesses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: danielmerys
 --
 
 ALTER SEQUENCE public.businesses_id_seq OWNED BY public.businesses.id;
 
 
 --
--- Name: schema_migrations; Type: TABLE; Schema: public; Owner: reidashwill
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: danielmerys
 --
 
 CREATE TABLE public.schema_migrations (
@@ -79,17 +79,17 @@ CREATE TABLE public.schema_migrations (
 );
 
 
-ALTER TABLE public.schema_migrations OWNER TO reidashwill;
+ALTER TABLE public.schema_migrations OWNER TO danielmerys;
 
 --
--- Name: businesses id; Type: DEFAULT; Schema: public; Owner: reidashwill
+-- Name: businesses id; Type: DEFAULT; Schema: public; Owner: danielmerys
 --
 
 ALTER TABLE ONLY public.businesses ALTER COLUMN id SET DEFAULT nextval('public.businesses_id_seq'::regclass);
 
 
 --
--- Data for Name: ar_internal_metadata; Type: TABLE DATA; Schema: public; Owner: reidashwill
+-- Data for Name: ar_internal_metadata; Type: TABLE DATA; Schema: public; Owner: danielmerys
 --
 
 COPY public.ar_internal_metadata (key, value, created_at, updated_at) FROM stdin;
@@ -98,7 +98,7 @@ environment	development	2020-06-15 16:36:05.515539	2020-06-15 16:36:05.515539
 
 
 --
--- Data for Name: businesses; Type: TABLE DATA; Schema: public; Owner: reidashwill
+-- Data for Name: businesses; Type: TABLE DATA; Schema: public; Owner: danielmerys
 --
 
 COPY public.businesses (id, name, address, link, category) FROM stdin;
@@ -170,7 +170,7 @@ COPY public.businesses (id, name, address, link, category) FROM stdin;
 
 
 --
--- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: reidashwill
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: danielmerys
 --
 
 COPY public.schema_migrations (version) FROM stdin;
@@ -180,14 +180,14 @@ COPY public.schema_migrations (version) FROM stdin;
 
 
 --
--- Name: businesses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: reidashwill
+-- Name: businesses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: danielmerys
 --
 
 SELECT pg_catalog.setval('public.businesses_id_seq', 194, true);
 
 
 --
--- Name: ar_internal_metadata ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: reidashwill
+-- Name: ar_internal_metadata ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: danielmerys
 --
 
 ALTER TABLE ONLY public.ar_internal_metadata
@@ -195,7 +195,7 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 
 --
--- Name: businesses businesses_pkey; Type: CONSTRAINT; Schema: public; Owner: reidashwill
+-- Name: businesses businesses_pkey; Type: CONSTRAINT; Schema: public; Owner: danielmerys
 --
 
 ALTER TABLE ONLY public.businesses
@@ -203,7 +203,7 @@ ALTER TABLE ONLY public.businesses
 
 
 --
--- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: reidashwill
+-- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: danielmerys
 --
 
 ALTER TABLE ONLY public.schema_migrations
